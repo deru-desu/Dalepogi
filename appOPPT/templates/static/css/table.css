@@ -1,0 +1,38 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+  }
+  body {
+    background: #fbf3ff;
+  } 
+  .placement {
+    position: absolute;
+    max-width: 1200px;
+    height: 900px;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  } 
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #567d46;
+    color: white;
+    text-align: center;
+  }
+  .profile{
+    font-family: Garamond, serif;
+    color:#000000;
+  }
+  .table {
+    font-family: Garamond, serif;
+    color:#000000;
+    font-size: 17px;
+  }
+  .edit {
+    background: linear-gradient(45deg, #567d46, #567d46);
+  }

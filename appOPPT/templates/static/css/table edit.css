@@ -1,0 +1,27 @@
+body
+  
+  .edit {
+    position: absolute;
+    right:    0;
+    bottom:   0;
+  }
+  
+  .edit {
+    padding: 5px;
+    outline: none;
+
+  }
+  
+  .button {
+        margin:auto;
+        display:block;
+  }
+  
+  .button:hover {
+    box-shadow: 2px 2px 3px ;
+  }
+  
+  .button:active {
+    box-shadow: 1px 1px 3px ;
+  }
+  

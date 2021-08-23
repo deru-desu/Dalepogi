@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>List - OPPT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="list.css">
+
+    
+</head>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+     </button>
+     <div class="collapse navbar-collapse" id="navbarNav">
+       <ul class="navbar-nav">
+         <li class="nav-item active">
+           <a class="nav-link" href="">OPPT</a>
+         </li>
+         <li class="nav-item">
+   
+         </li>
+       </ul>
+     </div>
+
+     <div class="mt-4">
+        <div class="d-flex justify-content-center links">
+            Create another account?<a href="{% url 'registerpage' %}" class="ml-2">Click Here</a>
+        </div>
+   
+     <span class="hello-msg">User: {{request.user}}</span>
+     <span ><a  class="hello-msg" href="{% url 'logout' %}">Logout</a></span>
+   </nav>
+
+<body id="page-top">
+    <div id="wrapper">
+
+        <div class="d-flex flex-column" id="content-wrapper">
+            <div id="content">
+                            
+                        </form>
+                            </li>
+                            <div class="d-none d-sm-block topbar-divider"></div>
+
+                        </ul>
+                    </div>
+                <div class="container">
+                <center><h3 class="profile">Education Students' Profile</h3></center>
+                    <div class="card shadow">
+                        <div class="card-header py-3">
+                            <center><p class="text-primary m-0 font-weight-bold">Student's Info</p></center>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+
+                            </div>
+                            <form action="{% url 'search' %}" method="GET">
+                                <input type="text" name="search" placeholder="ID Number"/>
+                                <button class="btn btn-primary" type="submit">Search</button>
+
+                            </form>
+
+                            <div class="table" id="dataTable" role="grid" aria-describedby="dataTable_info">
+                                <table class="table my-0" id="dataTable">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>ID Number</th>
+                                            <th>Student Status</th>
+                                            <th>Professor in Charge</th>
+                                            <th>School Placement</th>
+                                            <th>Schedule of Presentation</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for information in stulist %}
+                                        <tr>
+                                            <td>{{information.name}}</td>
+                                            <td>{{information.studentID}}</td>
+                                            <td>{{information.studentstatus}}</td>
+                                            <td>{{information.professor}}</td>
+                                            <td>{{information.school}}</td>
+                                            <td>{{information.schedule}}</td>
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="bg-white sticky-footer">
+                <div class="container my-auto">
+            </footer>
+        </div></i></a>
+    </div>
+</body>
+
+</html>
